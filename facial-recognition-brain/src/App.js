@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-      // {/*<Logo />
+      {/*<Logo />
       // <ImageLinkForm />
   // <FaceRecognition />*/}
     </div>
