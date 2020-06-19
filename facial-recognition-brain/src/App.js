@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import Navigation from './Components/Navigation/Navigation'
 import Logo from './Components/Logo/Logo'
@@ -9,7 +9,7 @@ import Particles from 'react-particles-js'
 const particlesOptions = {
   particles: {
     number: {
-      value: 70,
+      value: 30,
       density: {
         enable: true,
         value_area: 400
@@ -19,9 +19,10 @@ const particlesOptions = {
   }
 
 
-function App() {
-  return (
-    <div className="App">
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
       <Particles className="particles"
               params={particlesOptions}
             />
@@ -33,7 +34,8 @@ function App() {
       // <ImageLinkForm />
   // <FaceRecognition />*/}
     </div>
-  );
+    )
+  }
 }
 
 export default App;
