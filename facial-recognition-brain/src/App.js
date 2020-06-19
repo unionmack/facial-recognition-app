@@ -4,6 +4,7 @@ import Navigation from './Components/Navigation/Navigation'
 import Logo from './Components/Logo/Logo'
 import Rank from './Components/Rank/Rank.js'
 import ImageLinkForm from './Components/ImageLinkForm/ImageLinkForm'
+import FaceRecognition from './Components/FaceRecognition/FaceRecognition.js'
 import Particles from 'react-particles-js'
 import Clarifai from 'clarifai'
 
@@ -42,6 +43,8 @@ class App extends Component {
     app.models.predict("a403429f2ddf4b49b307e318f00e528b", "https://samples.clarifai.com/face-det.jpg").then(
     function(response) {
       // do something with response
+      console.log(response);
+
     },
     function(err) {
       // there was an error
@@ -59,6 +62,7 @@ class App extends Component {
       <Logo />
       <Rank />
       <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
+      <FaceRecognition />
       {/*<Logo />
       // <ImageLinkForm />
   // <FaceRecognition />*/}
