@@ -5,6 +5,7 @@ import Logo from './Components/Logo/Logo'
 import Rank from './Components/Rank/Rank.js'
 import ImageLinkForm from './Components/ImageLinkForm/ImageLinkForm'
 import FaceRecognition from './Components/FaceRecognition/FaceRecognition.js'
+import SignIn from './Components/SignIn/SignIn'
 import Particles from 'react-particles-js'
 import Clarifai from 'clarifai'
 
@@ -76,6 +77,7 @@ class App extends Component {
       <Particles className="particles"
               params={particlesOptions}
             />
+      <SignIn />
       <Navigation />
       <Logo />
       <Rank />
