@@ -24,13 +24,13 @@ class Register extends React.Component {
      }
 
      onSubmitSignIn = () => {
-        fetch('http://localhost:3000/signin', {
+        fetch('http://localhost:3000/register', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
                 email: this.state.email,
                 password: this.state.password,
-                name = this.state.name
+                name: this.state.name
             })
         })
         .then(response => response.json())
@@ -56,7 +56,7 @@ class Register extends React.Component {
                 type="text" 
                 name="name"  
                 id="name"
-                onNameChange={this.onNameChange} />
+                onChange={this.onNameChange} />
                 </div>
                 <div className="mt3">
                 <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
@@ -64,15 +64,15 @@ class Register extends React.Component {
                 className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
                 type="email" name="email-address"  
                 id="email-address"
-                onEmailChange={this.onEmailChange} />
+                onChange={this.onEmailChange} />
                 </div>
                 <div className="mv3">
                 <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
                 <input 
-                onclassName="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+                className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
                 type="password" name="password"  
                 id="password"
-                onPasswordChange={this.onPasswordChange} />
+                onChange={this.onPasswordChange} />
                 </div>
             </fieldset>
             <div className="">
