@@ -18,7 +18,8 @@ class SignIn extends React.Component {
     }
 
     onSubmitSignIn = () => {
-        console.log(this.state)
+        console.log(this.state);
+        this.props.onRouteChange('home');
     }
 
     render(){
@@ -31,16 +32,16 @@ class SignIn extends React.Component {
                 <legend className="f1 fw6 ph0 mh0">Sign In</legend>
                 <div className="mt3">
                 <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
-                <input className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="email-address"  id="email-address" />
+                <input onChange={this.onEmailChange} className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="email" name="email-address"  id="email-address" />
                 </div>
                 <div className="mv3">
                 <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
-                <input className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="password"  id="password" />
+                <input onChange={this.onPasswordChange} className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" type="password" name="password"  id="password" />
                 </div>
             </fieldset>
             <div className="">
                 <input 
-                onClick={() => onRouteChange('home')}
+                onClick={this.onSubmitSignIn}
                 className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" 
                 type="submit" 
                 value="Sign in" />
