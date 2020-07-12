@@ -36,7 +36,14 @@ class App extends Component {
       imageUrl: '',
       boxAll: [],
       route: 'signin',
-      isSignedIn: false
+      isSignedIn: false,
+      user: {
+        id: '',
+        name: '',
+        email: '',
+        entries: 0,
+        joined: ''
+      }
     }
   }
 
