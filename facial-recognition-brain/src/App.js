@@ -102,7 +102,7 @@ class App extends Component {
     app.models.predict('c0c0ac362b03416da06ab3fa36fb58e3', this.state.input)
       .then(response => {
         if(response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://stormy-cove-34840.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
